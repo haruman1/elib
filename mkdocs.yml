@@ -1,0 +1,40 @@
+site_name: E Lib Dokumentasi
+site_author: Haruman Wiguna
+site_description: Dokumentasi ini di khususkan untuk akses website menggunakan CodeIgniter 4 Untuk Perpustakaan Online
+extra:
+    version: 1.0
+
+extra_javascript:
+ - https://cdn.jsdelivr.net/gh/sindresorhus/copy-text-to-clipboard@main/index.js
+ - js/handleCopyClick.js
+extra_css:
+  - css/copy.css
+theme:
+  name: mkdocs
+  nav_style: dark
+  locale: id
+  shortcuts:
+    help: 191 # ?
+    next: 78 # n
+    previous: 80 # p
+    search: 83 # s
+  analytics:
+    gtag: G-76B9MQ56PL
+  highlightjs: true
+copyright: Copyright &copy; 2023 <a href="https://www.instagram.com/wigunaharuman/">Haruman Wiguna</a>, Maintained by the <a href="/release/#pembuat-website">E Lib Team</a>.
+documentation: Haruman.com
+extra:
+  generator: false
+nav:
+  - Home: 'index.md'
+  - Panduan Pengguna:
+      - 'Pembuatan Akun': 'pengguna/akun.md'
+
+  - Panduan Developer:
+      - Error Login: 'developer/login.md'
+      - Struktur Database: 'developer/db.md'
+      - Struktur Library: 'developer/lib.md'
+
+  - About:
+      - 'Release Notes': 'release.md'
+      - 'Contact': 'contact.md'
