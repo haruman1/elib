@@ -1,3 +1,7 @@
+:root {
+  --md-tooltip-width: 600px;
+}
+
 div.highlight button {
   color: #adb5bd;
   box-sizing: border-box;
