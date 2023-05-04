@@ -603,10 +603,20 @@
 
 <h1 id="panduan-settingan">Panduan Settingan</h1>
 <p>Settingan yang wajib anda ubah ketika menggunakan script awal ini adalah</p>
+<ul>
+<li>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3C7.58 3 4 4.79 4 7s3.58 4 8 4 8-1.79 8-4-3.58-4-8-4M4 9v3c0 2.21 3.58 4 8 4s8-1.79 8-4V9c0 2.21-3.58 4-8 4s-8-1.79-8-4m0 5v3c0 2.21 3.58 4 8 4s8-1.79 8-4v-3c0 2.21-3.58 4-8 4s-8-1.79-8-4Z"/></svg></span> <a href="#database">Settingan Database</a></p>
+</li>
+<li>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m20 8-8 5-8-5V6l8 5 8-5m0-2H4c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Z"/></svg></span> <a href="#email">Settingan Email</a></p>
+</li>
+<li>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1M8 13h8v-2H8v2m9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1 0 1.71-1.39 3.1-3.1 3.1h-4V17h4a5 5 0 0 0 5-5 5 5 0 0 0-5-5Z"/></svg></span> <a href="#url">Settingan URL</a></p>
+</li>
+<li>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 0C5.375 0 0 5.375 0 12c0 6.627 5.375 12 12 12 6.626 0 12-5.373 12-12 0-6.625-5.373-12-12-12zm-.624 21.62v-7.528H7.19L13.203 2.38v7.528h4.029L11.376 21.62z"/></svg></span> <a href="#api">Settingan API</a></p>
+</li>
+</ul>
 <hr />
 <h2 id="database">Database</h2>
 <p>Database kita menggunakan database mysql, jadi anda harus mengubahnya di file .env pada folder backend, file yang wajib diubah adalah
@@ -630,22 +640,34 @@ Dokumentasi lebih lengkap bisa check di <a href="https://codeigniter.com/user_gu
 <p>pada contoh ini saya gunakan phpmailer untuk mengirim email, jadi anda harus mengubahnya di file .env pada folder backend, file yang wajib diubah adalah
 pada baris ini anda harus mengubahnya sesuai dengan email anda, dan pastikan anda mengaktifkan akses kurang aman pada email anda, untuk lebih lengkapnya bisa check di <a href="https://codeigniter.com/user_guide/libraries/email.html">Codeigniter 4 Email</a>,
 untuk setting password client jika mau pakai Google Mail <a href="https://www.mikrotik.co.id/artikel/498/">Setting email gmail</a></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="x">app.email = xxx@gmail.com</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="x">app.email.pass = xxxx</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="x">app.email.host = smtp.gmail.com</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="x">app.email.port = 587</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="x">app.email.encryption = tls</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nt">app</span><span class="p">.</span><span class="nc">email</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nt">xxx</span><span class="p">@</span><span class="k">gmail</span><span class="p">.</span><span class="nc">com</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nt">app</span><span class="p">.</span><span class="nc">email</span><span class="p">.</span><span class="nc">pass</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nt">xxxx</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="nt">app</span><span class="p">.</span><span class="nc">email</span><span class="p">.</span><span class="nc">host</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nt">smtp</span><span class="p">.</span><span class="nc">gmail</span><span class="p">.</span><span class="nc">com</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="nt">app</span><span class="p">.</span><span class="nc">email</span><span class="p">.</span><span class="nc">port</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nt">587</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="nt">app</span><span class="p">.</span><span class="nc">email</span><span class="p">.</span><span class="nc">encryption</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nt">tls</span>
 </code></pre></div>
 <hr />
 <h2 id="url">URL</h2>
 <p>untuk mengubah url anda bisa mengubahnya di file .env pada folder backend, file yang wajib diubah adalah</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="x">app.baseURL = &#39;http://localhost:8080/&#39;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>app.baseURL = &#39;http://localhost:8080/&#39;
 </code></pre></div>
 <hr />
 <h2 id="api">API</h2>
 <p>Untuk membuat sebuah API agar jalan memerlukan beberapa persyaratan yaitu :
 membuat sebuah controller, model, dan setting routes, untuk lebih lengkapnya bisa check di <a href="https://codeigniter.com/user_guide/incoming/api.html">Codeigniter 4 API</a></p>
 <p>untuk membuat controller, model, dan isi database api di codeigniter 4 anda bisa membuatnya dengan cara buka terminal pada folder backend dan ketikkan perintah berikut</p>
+<ul>
+<li>
+<p><a href="https://codeigniter.com/user_guide/cli/cli_generators.html?highlight=make%20controller#make-controller">Tutorial membuat <strong>Controller</strong> Restful Codeigniter 4</a></p>
+</li>
+<li>
+<p><a href="https://codeigniter.com/user_guide/cli/cli_generators.html?highlight=make%20controller#make-model">Tutorial membuat <strong>Model</strong> Codeigniter 4</a></p>
+</li>
+<li>
+<p><a href="https://codeigniter.com/user_guide/cli/cli_generators.html?highlight=make%20controller#make-migration">Tutorial membuat <strong>Table</strong> di dalam Database Codeigniter 4</a></p>
+</li>
+</ul>
+<p>atau bisa juga dengan cara dibawah ini</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="x">//buat controller</span>
 <a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="x">php spark make:controller sebuahController  --restful</span>
 <a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
@@ -653,7 +675,30 @@ membuat sebuah controller, model, dan setting routes, untuk lebih lengkapnya bis
 <a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="x">php spark make:model sebuahModel</span>
 <a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>
 <a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="x">//buat database</span>
-<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="x">php spark make:migration create_sebuahTable</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="x">php spark make:migration nama_table_didatabase</span>
+</code></pre></div>
+<p>selanjutnya yaitu dasar cara membuat API di codeigniter 4, anda bisa membuatnya dengan cara buka terminal pada folder backend dan ketikkan perintah berikut</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="x">php spark make:controller sebuahController  --restful</span>
+</code></pre></div>
+<p>dan setelah itu untuk dasar yang telah saya buat untuk melihat data user didalam project ini anda bisa mengikuti tutorial berikut</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="x"> public function index($id = null)</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="x">    {</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="x">        $limit = $this-&gt;request-&gt;getGet(&#39;limit&#39;); // untuk mengambil data bedasarkan angka yang dibutuhkan contoh ?limit=10</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="x">        if ($limit) {</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="x">            $dataUser = $this-&gt;userModel-&gt;findAll($limit);</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="x">        } else {</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="x">            $dataUser = $this-&gt;userModel-&gt;findAll();</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="x">        }</span>
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="x">        return $this-&gt;respond(</span>
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="x">            [</span>
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="x">                &#39;status&#39; =&gt;  200,</span>
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="x">                &#39;code&#39; =&gt; &#39;OK&#39;,</span>
+<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a><span class="x">                &#39;message&#39; =&gt; &#39;Data berhasil diambil&#39;,</span>
+<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a><span class="x">                &#39;response&#39; =&gt; $dataUser</span>
+<a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a><span class="x">            ]</span>
+<a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a>
+<a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a><span class="x">        );</span>
+<a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a><span class="x">    }</span>
 </code></pre></div>
 
 
